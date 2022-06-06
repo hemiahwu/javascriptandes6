@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .success,
+      .error {
+        color: white;
+        padding: 5px;
+        margin: 5px 0 15px 0;
+      }
+
+      .success {
+        background: green;
+      }
+
+      .error {
+        background: red;
+      }
+    </style>
+    <title>课程列表</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center">添加课程</h1>
+      <form id="course-form">
+        <div class="form-group">
+          <label for="title">课程名称</label>
+          <input type="text" id="title" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="link">课程链接</label>
+          <input
+            type="text"
+            value="https://imissu.ke.qq.com"
+            id="link"
+            class="form-control"
+          />
+        </div>
+        <div class="form-group">
+          <label for="isbn">课程单号</label>
+          <input type="text" id="isbn" class="form-control" />
+        </div>
+        <div>
+          <input type="submit" value="提交" class="btn btn-block btn-primary" />
+        </div>
+      </form>
+
+      <table class="table mt-5">
+        <thead>
+          <tr>
+            <th>课程名称</th>
+            <th>课程链接</th>
+            <th>课程单号</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="course-list"></tbody>
+      </table>
+    </div>
+
+    <script src="appes6.js"></script>
+  </body>
+</html>

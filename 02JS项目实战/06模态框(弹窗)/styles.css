@@ -1,0 +1,259 @@
+/*
+=============== 
+全局变量
+===============
+*/
+
+:root {
+  --ms-primary-1: hsl(205, 86%, 17%);
+  --ms-primary-2: hsl(205, 77%, 27%);
+  --ms-primary-3: hsl(205, 72%, 37%);
+  --ms-primary-4: hsl(205, 63%, 48%);
+  --ms-primary-5: #49a6e9;
+  --ms-primary-6: hsl(205, 89%, 70%);
+  --ms-primary-7: hsl(205, 90%, 76%);
+  --ms-primary-8: hsl(205, 86%, 81%);
+  --ms-primary-9: hsl(205, 90%, 88%);
+  --ms-primary-10: hsl(205, 100%, 96%);
+  --ms-grey-1: hsl(209, 61%, 16%);
+  --ms-grey-2: hsl(211, 39%, 23%);
+  --ms-grey-3: hsl(209, 34%, 30%);
+  --ms-grey-4: hsl(209, 28%, 39%);
+  --ms-grey-5: hsl(210, 22%, 49%);
+  --ms-grey-6: hsl(209, 23%, 60%);
+  --ms-grey-7: hsl(211, 27%, 70%);
+  --ms-grey-8: hsl(210, 31%, 80%);
+  --ms-grey-9: hsl(212, 33%, 89%);
+  --ms-grey-10: hsl(210, 36%, 96%);
+  --ms-white: #fff;
+  --ms-red-dark: hsl(360, 67%, 44%);
+  --ms-red-light: hsl(360, 71%, 66%);
+  --ms-green-dark: hsl(125, 67%, 44%);
+  --ms-green-light: hsl(125, 71%, 66%);
+  --ms-black: #222;
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+
+/*
+=============== 
+全局样式
+===============
+*/
+
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-secondary);
+  background: var(--ms-grey-10);
+  color: var(--ms-grey-1);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img:not(.logo) {
+  width: 100%;
+}
+
+img {
+  display: block;
+}
+
+h1, h2, h3, h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-primary);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 0.875rem;
+}
+
+p {
+  margin-bottom: 1.25rem;
+  color: var(--ms-grey-5);
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1, h2, h3, h4 {
+    line-height: 1;
+  }
+}
+
+/*  global classes */
+
+.btn {
+  background: transparent;
+  color: var(--ms-black);
+  padding: 0.375rem 0.75rem;
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  transition: var(--transition);
+  font-size: 0.875rem;
+  border: 2px solid var(--ms-black);
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius);
+}
+
+.btn:hover {
+  color: var(--ms-white);
+  background: var(--ms-black);
+}
+
+/* section */
+
+.section {
+  padding: 5rem 0;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+  }
+}
+
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+/*
+=============== 
+Modal
+===============
+*/
+
+.hero {
+  min-height: 100vh;
+  background: url("./hero.jpeg") center/cover no-repeat;
+  display: grid;
+  place-items: center;
+}
+
+.banner {
+  background: var(--ms-white);
+  padding: 4rem 0;
+  border-radius: var(--radius);
+  box-shadow: var(--light-shadow);
+  text-align: center;
+  width: 90vw;
+  max-width: var(--fixed-width);
+}
+
+.modal-btn {
+  margin-top: 2rem;
+  background: var(--ms-primary-5);
+  border-color: var(--ms-primary-5);
+  color: var(--ms-white);
+}
+
+.modal-btn:hover {
+  background: transparent;
+  color: var(--ms-primary-5);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(73, 166, 233, 0.5);
+  display: grid;
+  place-items: center;
+  transition: var(--transition);
+  visibility: hidden;
+  z-index: -10;
+}
+
+/* OPEN/CLOSE MODAL */
+
+.open-modal {
+  visibility: visible;
+  z-index: 10;
+}
+
+.modal-container {
+  background: var(--ms-white);
+  border-radius: var(--radius);
+  width: 90vw;
+  height: 30vh;
+  max-width: var(--fixed-width);
+  text-align: center;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  background: transparent;
+  border-color: transparent;
+  color: var(--ms-red-dark);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.close-btn:hover {
+  color: var(--ms-red-light);
+  transform: scale(1.3);
+}

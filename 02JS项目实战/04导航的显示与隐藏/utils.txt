@@ -1,0 +1,44 @@
+ <nav class="navbar">
+    <div class="nav-center">
+      <div class="nav-header">
+        <img src="logo.svg" class="nav-logo" alt="">
+        <button class="nav-toggle" id="nav-toggle">
+          <i class="fa fa-bars"></i>
+        </button>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li>
+          <a href="#" class="nav-link">主页</a>
+        </li>
+        <li>
+          <a href="#" class="nav-link">简介</a>
+        </li>
+        <li>
+          <a href="#" class="nav-link">服务</a>
+        </li>
+        <li>
+          <a href="#" class="nav-link">功能</a>
+        </li>
+        <li>
+          <a href="#" class="nav-link">作品</a>
+        </li>
+      </ul>
+      <ul class="nav-icons">
+        <li>
+          <a href="#" class="nav-icon">
+            <i class="fa fa-weibo"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-icon">
+            <i class="fa fa-weixin"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-icon">
+            <i class="fa fa-qq"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>

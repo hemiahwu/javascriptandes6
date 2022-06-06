@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript-设计模式</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #34495e;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "montserrat", sans-serif;
+        }
+
+        .loading {
+            width: 200px;
+            height: 200px;
+            box-sizing: border-box;
+            border-radius: 50%;
+            border-top: 10px solid #e74c3c;
+            position: relative;
+            animation: a1 2s linear infinite;
+        }
+
+        .loading::before,
+        .loading::after {
+            content: '';
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 0;
+            top: -10px;
+            box-sizing: border-box;
+            border-radius: 50%;
+        }
+
+        .loading::before {
+            border-top: 10px solid #e67e22;
+            transform: rotate(120deg);
+        }
+
+        .loading::after {
+            border-top: 10px solid #3498db;
+            transform: rotate(240deg);
+        }
+
+        @keyframes a1 {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <h1>JavaScript 单例(Singleton) 设计模式</h1> -->
+
+    <button id="handleLoading">加载动画</button>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
